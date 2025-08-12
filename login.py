@@ -15,7 +15,7 @@ class App(ctk.CTk):
         self.title('Log In') # Title
         self.geometry('500x300') # Size
         self.resizable(False, False) # Resizing capability
-        self.iconbitmap('clover.ico') # Icon
+        self.iconbitmap('assets/clover.ico') # Icon
 
         self.heading = ctk.CTkLabel(self, text="Login", font=('Segoe UI', 24, 'bold'))
         self.heading.pack(pady=5)
