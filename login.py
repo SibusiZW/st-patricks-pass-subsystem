@@ -3,6 +3,7 @@
 import customtkinter as ctk
 import pymysql
 from tkinter import messagebox
+import dashboard
 
 class App(ctk.CTk):
     def __init__(self):
@@ -73,6 +74,9 @@ class App(ctk.CTk):
     def login(self):
         if self.verify_user_credentials(self.user_entry.get(), self.passwd_entry.get()):
             messagebox.showinfo('Success', "Login succesfull!!")
+            app = dashboard.App()
+            self.destroy()
+            app.mainloop()
         else:
             messagebox.showerror('Error', "User not found!")
 
