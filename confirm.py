@@ -74,6 +74,3 @@ class App(ctk.CTk):
         with open(RECORD_FILE, 'w') as f:
             data = self.records
             json.dump(data, f, indent=4)
-
-a = App()
-a.mainloop()
